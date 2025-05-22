@@ -28,3 +28,11 @@ class PhilosopherContextNotFound(Exception):
     def __init__(self, philosopher_id: str):
         self.message = f"Philosopher context for {philosopher_id} not found."
         super().__init__(self.message)
+
+
+class PhilosopherNotFound(Exception):
+    """Exception raised when a philosopher's profile is not found."""
+
+    def __init__(self, philosopher_id: str):
+        self.message = f"Philosopher profile for {philosopher_id} not found."
+        super().__init__(self.message)

@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str
     GROQ_LLM_MODEL: str = "llama-3.3-70b-versatile"
     GROQ_LLM_MODEL_CONTEXT_SUMMARY: str = "llama-3.1-8b-instant"
-    
+
     # --- OpenAI Configuration (Required for evaluation) ---
     OPENAI_API_KEY: str
 
@@ -48,8 +48,10 @@ class Settings(BaseSettings):
     RAG_CHUNK_SIZE: int = 256
 
     # --- Paths Configuration ---
+    PROJECT_PATH: Path = Path(__file__).parent.parent.parent
     EVALUATION_DATASET_FILE_PATH: Path = Path("data/evaluation_dataset.json")
     EXTRACTION_METADATA_FILE_PATH: Path = Path("data/extraction_metadata.json")
+    PHILOSOPHERS_FILE_PATH: Path = Path("data/philosophers.json")
 
 
 settings = Settings()
