@@ -47,6 +47,10 @@ class Settings(BaseSettings):
     RAG_DEVICE: str = "cpu"
     RAG_CHUNK_SIZE: int = 256
 
+    # --- API Configuration ---
+    API_NAME: str = "PhiloAgents API"
+    API_DESCRIPTION: str = "API for the PhiloAgents project https://github.com/neural-maze/philoagents-course/"
+
     # --- Paths Configuration ---
     PROJECT_PATH: Path = Path(__file__).parent.parent.parent
     EVALUATION_DATASET_FILE_PATH: Path = Path("data/evaluation_dataset.json")
